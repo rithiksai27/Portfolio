@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { cn } from "@/utils/cn";
 
 export const GlareCard4 = ({
@@ -67,14 +67,11 @@ export const GlareCard4 = ({
     }
   };
 
-  return (
-    <div
-      style={containerStyle}
-      className="relative isolate [contain:layout_style] [perspective:600px] transition-transform duration-[var(--duration)] ease-[var(--easing)] delay-[var(--delay)] will-change-transform w-[320px] [aspect-ratio:17/21]"
-      ref={refElement}
-      onMouseMove={(event) => {
+  useEffect(() => {
+    const handleMouseMove = (event: MouseEvent) => {
+      if (refElement.current) {
         const rotateFactor = 0.4;
-        const rect = event.currentTarget.getBoundingClientRect();
+        const rect = refElement.current.getBoundingClientRect();
         const position = {
           x: event.clientX - rect.left,
           y: event.clientY - rect.top,
@@ -99,27 +96,51 @@ export const GlareCard4 = ({
         glare.y = percentage.y;
 
         updateStyles();
-      }}
-      onMouseEnter={() => {
-        isPointerInside.current = true;
-        setIsHovered(true);
-        if (refElement.current) {
-          setTimeout(() => {
-            if (isPointerInside.current) {
-              refElement.current?.style.setProperty("--duration", "0s");
-            }
-          }, 300);
-        }
-      }}
-      onMouseLeave={() => {
-        isPointerInside.current = false;
-        setIsHovered(false);
-        if (refElement.current) {
-          refElement.current.style.removeProperty("--duration");
-          refElement.current?.style.setProperty("--r-x", `0deg`);
-          refElement.current?.style.setProperty("--r-y", `0deg`);
-        }
-      }}
+      }
+    };
+
+    const handleMouseEnter = () => {
+      isPointerInside.current = true;
+      setIsHovered(true);
+      if (refElement.current) {
+        setTimeout(() => {
+          if (isPointerInside.current) {
+            refElement.current?.style.setProperty("--duration", "0s");
+          }
+        }, 300);
+      }
+    };
+
+    const handleMouseLeave = () => {
+      isPointerInside.current = false;
+      setIsHovered(false);
+      if (refElement.current) {
+        refElement.current.style.removeProperty("--duration");
+        refElement.current?.style.setProperty("--r-x", `0deg`);
+        refElement.current?.style.setProperty("--r-y", `0deg`);
+      }
+    };
+
+    if (refElement.current) {
+      refElement.current.addEventListener("mousemove", handleMouseMove);
+      refElement.current.addEventListener("mouseenter", handleMouseEnter);
+      refElement.current.addEventListener("mouseleave", handleMouseLeave);
+    }
+
+    return () => {
+      if (refElement.current) {
+        refElement.current.removeEventListener("mousemove", handleMouseMove);
+        refElement.current.removeEventListener("mouseenter", handleMouseEnter);
+        refElement.current.removeEventListener("mouseleave", handleMouseLeave);
+      }
+    };
+  }, []);
+
+  return (
+    <div
+      style={containerStyle}
+      className="relative isolate [contain:layout_style] [perspective:600px] transition-transform duration-[var(--duration)] ease-[var(--easing)] delay-[var(--delay)] will-change-transform w-[320px] [aspect-ratio:17/21]"
+      ref={refElement}
     >
       <div className="h-full grid will-change-transform origin-center transition-transform duration-[var(--duration)] ease-[var(--easing)] delay-[var(--delay)] [transform:rotateY(var(--r-x))_rotateX(var(--r-y))] rounded-[var(--radius)] border border-slate-800 hover:[--opacity:0.6] hover:[--duration:200ms] hover:[--easing:linear] hover:filter-none overflow-hidden">
         <div className="w-full h-full grid [grid-area:1/1] mix-blend-soft-light [clip-path:inset(0_0_0_0_round_var(--radius))]">
