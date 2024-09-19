@@ -73,63 +73,58 @@ export const navItems = [
     },
   ];
   
-  export const projects = [
-    {
-      id: 1,
-      title: "Interactive Blogging Website with React.js",
-      des: "Developed a modern blogging platform using React.js, Node.js, Express.js, and MongoDB",
-      img: "/blog.svg",
-      iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-      link: "https://snap-write.vercel.app/",
-    },
-    {
-      id: 4,
-      title: "Dynamic Portfolio Launch",
-      des: "Architected a dynamic portfolio website utilizing Next.js to showcase personal projects and skills.",
-      img: "portfolio.svg",
-      iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-      link: "https://rithiksaiportfolio.vercel.app/",
-    },
-    {
-      id: 2,
-      title: "Amazon-Inspired E-Commerce Site",
-      des: "Developed a website similar to Amazon using HTML and CSS.",
-      img: "/amazonclone.svg",
-      iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-      link: "https://rithiksai27.github.io/AmazonClone/",
-    },
-    {
-      id: 3,
-      title: "iCoder Tech Hub with Bootstrap",
-      des: "Developed an iCoder website using Bootstrap for login, signup, and contact pages.",
-      img: "/icoder.svg",
-      iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-      link: "https://rithiksai27.github.io/iCoderBlogging/index.html?#",
-    },
-    
-  ];
   
-  export const Academics = [
-    {
-      quote:
-        "Entering my third year of engineering in computer science, I've tackled over 300 problems on platforms like LeetCode and CodeChef. Alongside, I've maintained an impressive CGPA of 9.49 by the end of my second year. Each problem solved and every achievement earned fuels my passion for coding and commitment to academic excellence.",
-      name: "Computer Science | KL University, AP",
-      title: "CGPA: 9.49 | JUL'22 - JUN'26",
-    },
-    {
-      quote:
-        "Scoring a whopping 96.6% in my Class 12 exams, I've demonstrated my prowess at cracking problems in math, physics, and chemistry. This talent flows nicely into figuring out coding and techie puzzles. Mixing my book smarts with my tech skills, I'm a handy person to have around for any job. I'm all set to come up with cool ideas and ace whatever I'm into.",
-      name: "XII | Narayana College, AP",
-      title: "Percentage: 96.6% | JUN'21",
-    },
-    {
-      quote:
-        "I have successfully completed my Class 10 with a perfect GPA of 10. This achievement reflects my strong academic foundation and dedication to excellence. My ability to consistently perform at a high level demonstrates my commitment to hard work and my aptitude for tackling challenging subjects. This solid academic background, combined with my problem-solving skills, positions me well for future academic and professional pursuits.",
-      name: "X | Narayana E.M High School, AP",
-      title: "GPA: 10/10 | MAY'19",
-    },
-   
-  ];
+export const projects = [
+  {
+    id: 1,
+    title: "Interactive Blogging Website with React.js",
+    des: "Developed a modern blogging platform using React.js, Node.js, Express.js, and MongoDB",
+    img: "/blog.svg",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+    link: "https://blogging-snapwrite.vercel.app/",
+  },
+  {
+    id: 2,
+    title: "Apple-Themed Animated Website",
+    des: "Leveraged Three.js and React Three Fiber to create dynamic animations that enhance visual appeal.",
+    img: "/apple.svg",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
+    link: "https://rithiksai-apple-animate.vercel.app/",
+  },
+  {
+    id: 3,
+    title: "Transforming User Experience Through 3D",
+    des: "Engineered immersive 3D environments with React-Three-Fiber and Drei, turning web interfaces into vibrant visual journeys that captivate and inspire exploration.",
+    img: "/circular.svg",
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
+    link: "https://rithiksai-circular-animate.vercel.app/",
+  },
+  {
+    id: 4,
+    title: "Real-Time Multiplayer Chess",
+    des: "Created an immersive real-time chess game leveraging Socket.io and chess.js for seamless multiplayer experiences.",
+    img: "/chess.svg",
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
+    link: "https://chessify-shg5.onrender.com/",
+  },
+  {
+    id: 5,
+    title: "Amazon-Inspired E-Commerce Site",
+    des: "Developed a website similar to Amazon using HTML and CSS.",
+    img: "/amazonclone.svg",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
+    link: "https://rithiksai27.github.io/AmazonClone/",
+  },
+  {
+    id: 6,
+    title: "iCoder Tech Hub with Bootstrap",
+    des: "Developed an iCoder website using Bootstrap for login, signup, and contact pages.",
+    img: "/icoder.svg",
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
+    link: "https://rithiksai27.github.io/iCoderBlogging/index.html?#",
+  },
+];
+
   
   export const companies = [
     {
