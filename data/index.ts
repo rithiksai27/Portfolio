@@ -80,35 +80,18 @@ export const navItems = [
       des: "Developed a modern blogging platform using React.js, Node.js, Express.js, and MongoDB",
       img: "/blog.svg",
       iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-      link: "https://blogging-snapwrite.vercel.app/",
-    },
-    {
-      id: 2,
-      title: "Apple-Themed Animated Website",
-      des: "Leveraged Three.js and React Three Fiber to create dynamic animations that enhance visual appeal.",
-      img: "/apple.svg",
-      iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-      link: "https://rithiksai-apple-animate.vercel.app/",
-    },
-
-    {
-      id: 3,
-      title: "Transforming User Experience Through 3D",
-      des: "Engineered immersive 3D environments with React-Three-Fiber and Drei, turning web interfaces into vibrant visual journeys that captivate and inspire exploration.",
-      img: "/circular.svg",
-      iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-      link: "https://rithiksai-circular-animate.vercel.app/",
+      link: "https://snap-write.vercel.app/",
     },
     {
       id: 4,
-      title: "Real-Time Multiplayer Chess",
-      des: "Created an immersive real-time chess game leveraging Socket.io and chess.js for seamless multiplayer experiences.",
-      img: "/chess.svg",
+      title: "Dynamic Portfolio Launch",
+      des: "Architected a dynamic portfolio website utilizing Next.js to showcase personal projects and skills.",
+      img: "portfolio.svg",
       iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-      link: "https://chessify-shg5.onrender.com/",
+      link: "https://rithiksaiportfolio.vercel.app/",
     },
     {
-      id: 5,
+      id: 2,
       title: "Amazon-Inspired E-Commerce Site",
       des: "Developed a website similar to Amazon using HTML and CSS.",
       img: "/amazonclone.svg",
@@ -116,13 +99,14 @@ export const navItems = [
       link: "https://rithiksai27.github.io/AmazonClone/",
     },
     {
-      id: 6,
+      id: 3,
       title: "iCoder Tech Hub with Bootstrap",
       des: "Developed an iCoder website using Bootstrap for login, signup, and contact pages.",
       img: "/icoder.svg",
       iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
       link: "https://rithiksai27.github.io/iCoderBlogging/index.html?#",
     },
+    
   ];
   
   export const Academics = [
