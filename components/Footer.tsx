@@ -1,31 +1,30 @@
 import { FaLocationArrow } from "react-icons/fa6";
-import Image from 'next/image'; // Ensure this import is correct
-import { socialMedia } from "@/data"; // Check if this import path is correct
-import MagicButton from "../components/ui/MagicButton"; // Check if this import path is correct
+
+import { socialMedia } from "@/data";
+import MagicButton from "../components/ui/MagicButton";
 
 const Footer = () => {
   return (
     <footer className="w-full pt-20 pb-10" id="contact">
-      {/* Background grid */}
+      {/* background grid */}
       <div className="w-full absolute left-0 -bottom-72 min-h-96">
-        <Image
+        <img
           src="/footer-grid.svg"
           alt="grid"
-          layout="fill" // Ensures the image fills the container
-          className="opacity-50"
+          className="w-full h-full opacity-50 "
         />
       </div>
 
       <div className="flex flex-col items-center">
         <h1 className="heading lg:max-w-[45vw]">
-          Looking to bring <span className="text-purple">your</span> ideas to life?
+        Looking to bring <span className="text-purple">your</span> ideas to life?
         </h1>
         <p className="text-white-200 md:mt-10 my-5 text-center">
-          Let&apos;s collaborate and make it happen. Reach out today!
+        Let's collaborate and make it happen. Reach out today!
         </p>
         <a href="mailto:rithiksai27@gmail.com">
           <MagicButton
-            title="Let&apos;s get in touch"
+            title="Let's get in touch"
             icon={<FaLocationArrow />}
             position="right"
           />
@@ -37,23 +36,18 @@ const Footer = () => {
         </p>
 
         <div className="flex items-center md:gap-3 gap-6">
-          {socialMedia.map((info) => (
-            <a
-              key={info.id}
-              href={info.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300"
-            >
-              <Image 
-                src={info.img} 
-                alt="icon" 
-                width={20} 
-                height={20} 
-              />
-            </a>
-          ))}
-        </div>
+  {socialMedia.map((info) => (
+    <a
+      key={info.id}
+      href={info.link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300"
+    >
+      <img src={info.img} alt="icon" width={20} height={20} />
+    </a>
+  ))}
+</div>
       </div>
     </footer>
   );

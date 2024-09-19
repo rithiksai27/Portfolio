@@ -30,10 +30,10 @@ const RecentProjects = () => {
                   <img src="/bg.png" alt="bgimg" />
                 </div>
                 <img
-                  src={item.img}
-                  alt="cover"
-                  className="z-10 absolute bottom-0"
-                />
+                    src={item.img}
+                    alt="cover"
+                    className="absolute inset-0 w-full h-full object-cover z-10"
+                    />
               </div>
 
               <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">

@@ -1,15 +1,21 @@
 import { gridItems } from "@/data";
 import { BentoGrid, BentoGridItem } from "./ui/BentoGrid";
 import { useState } from "react";
-import { IoCopyOutline } from "react-icons/io5";
 import Lottie from "react-lottie";
-
 import { cn } from "../utils/cn";
 import { BackgroundGradientAnimation } from "../components/ui/GradientBg";
 import GridGlobe from "../components/ui/GridGlobe";
 import animationData from "@/data/confetti.json";
 import MagicButton from "../components/ui/MagicButton";
+
 const About = () => {
+  const [showConfetti, setShowConfetti] = useState(false);
+
+  const handleButtonClick = () => {
+    setShowConfetti(true);
+    setTimeout(() => setShowConfetti(false), 3000); // Reset after 3 seconds
+  };
+
   return (
     <section id="about">
       <BentoGrid className="w-full py-20">
@@ -27,6 +33,17 @@ const About = () => {
           />
         ))}
       </BentoGrid>
+      {showConfetti && (
+        <Lottie
+          options={{
+            animationData: animationData,
+            loop: false,
+            autoplay: true,
+          }}
+          height={400}
+          width={400}
+        />
+      )}
     </section>
   );
 };

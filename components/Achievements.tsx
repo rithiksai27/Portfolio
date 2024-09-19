@@ -8,7 +8,7 @@ export function Achievements() {
       <h1 className="heading text-center mb-1">
         Key <span className="text-purple">Accomplishments</span>
       </h1>
-      <div className="flex flex-col md:flex-row justify-center items-center md:justify-between gap-4 md:gap-1">
+      <div className="flex flex-col md:flex-row justify-center items-center md:justify-between gap-2 md:gap-1">
         <div className="w-full md:w-auto">
           <MacbookScroll1
             title="Web-Sprint 2023"
